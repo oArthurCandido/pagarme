@@ -35,27 +35,30 @@ router.get('/:compra_id/status/', function (req, res, next) {
       console.log(order_id);
       console.log(result);
       let message = {};
+      console.log();
 
-      switch (result.data.id) {
+      switch (result.data.status) {
         case 'authorized':
           message = {
-            Status: 'Código ' + result.status + ' - Pagamento autorizado!'
+            Status: 'Código ' + result.data.status + ' - Pagamento autorizado!'
           };
           break;
         case 'paid':
           message = {
             Status:
-              'Código ' + result.status + ' - Pagamento concluído com sucesso!'
+              'Código ' +
+              result.data.status +
+              ' - Pagamento concluído com sucesso!'
           };
           break;
         case 'processing':
           message = {
-            Status: 'Código ' + result.status + ' - Pagamento pendente.'
+            Status: 'Código ' + result.data.status + ' - Pagamento pendente.'
           };
           break;
         default:
           message = {
-            Status: 'Código ' + result.status + ' - Pagamento falhou.'
+            Status: 'Código ' + result.data.status + ' - Pagamento falhou.'
           };
       }
       res.send(message);
