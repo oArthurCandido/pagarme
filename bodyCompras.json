@@ -1,0 +1,51 @@
+{
+  "customer": {
+       "code": "123456",
+       "document": "87231975011",
+       "phones": {
+            "mobile_phone": {
+                 "country_code": "55",
+                 "area_code": "11",
+                 "number": "999999999"
+            }
+       },
+       "document_type": "CPF",
+       "type": "individual",
+       "name": "Tony Stark",
+       "email": "tony@starkindustries.com"
+  },
+  "items": [
+       {
+            "amount": 250,
+            "description": "blablabla",
+            "quantity": 1,
+            "code": "12345678"
+       }
+  ],
+  "payments": [
+       {
+            "credit_card": {
+                 "card": {
+                      "billing_address": {
+                           "line_1": "13, Rua Jose Ferraz, Independencia",
+                           "zip_code": "12031710",
+                           "city": "Taubate",
+                           "state": "SP",
+                           "country": "BR"
+                      },
+                      "number": "5486532033420187",
+                      "holder_name": "Tony Stark de Taubat",
+                      "holder_document": "87231975011",
+                      "exp_month": 11,
+                      "exp_year": 2022,
+                      "cvv": "202",
+                      "brand": "Mastercard"
+                 },
+                 "operation_type": "auth_and_capture",
+                 "installments": 1,
+                 "statement_descriptor": "teste"
+            },
+            "payment_method": "credit_card"
+       }
+  ]
+}
